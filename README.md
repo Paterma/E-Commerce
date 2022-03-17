@@ -185,20 +185,6 @@ After creating the models and routes, run `npm run seed` to seed data to your da
 
 Create the code needed in `server.js` to sync the Sequelize models to the MySQL database on server start.
 
-## Grading Requirements
-
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This homework is graded based on the following criteria: 
-
 ### Deliverables: 10%
 
 * The GitHub repository containing your application code.
@@ -249,11 +235,9 @@ This homework is graded based on the following criteria:
 
 ## Review
 
-You are required to submit BOTH of the following for review:
+I am required to submit BOTH of the following for review:
 
-* A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
+* A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met:
 
-* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
-
----
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+* The URL of the GitHub repository:
+https://github.com/Paterma/E-Commerce
