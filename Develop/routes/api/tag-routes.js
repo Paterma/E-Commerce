@@ -27,12 +27,12 @@ router.get('/:id', (req, res) => {
       attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
     }]
   })
-}) .then(tagData => {
+.then(tagData => {
   if (!tagData){
     res.status(404).json({message: 'There was no tag found with this id'})
     return;
   } res.json(tagData)
-
+})
 });
 
 router.post('/', (req, res) => {
