@@ -1,2 +1,0 @@
-// Hint: Be sure to look at the mini-project code for syntax help and use your model's column definitions to figure out what `req.body` will be for POST and PUT routes!
-// After creating the models and routes, run `npm run seed` to seed data to your database so that you can test your routes.
