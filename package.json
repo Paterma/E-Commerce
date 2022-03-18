@@ -3,7 +3,8 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.17.0",
-    "seed": "node seeds/index.js"
+    "nodemon": "^2.0.15",
+    "seed": "node seeds/index.js",
+    "sequelize": "^6.17.0"
   }
 }
