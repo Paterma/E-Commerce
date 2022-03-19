@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { json } = require('express/lib/response');
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
@@ -56,6 +57,10 @@ router.put('/:id', (req, res) => {
     where: {
       id: req.params.id
     }
+  }) .then(categoryData => res.json (categoryData))
+  .catch(err => {
+    console.log(err)
+    res.status(500).json(err);
   })
 });
 

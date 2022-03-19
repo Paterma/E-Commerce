@@ -12,10 +12,7 @@ router.get('/', (req, res) => {
     include: [{
       model: Category,
       attributes: ['category_name']
-    }
-  //   {model: Tag,
-  //   attributes: ['tag_name']}
-  ]
+    }]
   }) .then(productData => res.json(productData))
   .catch(err => {
     console.log(err);
@@ -35,10 +32,10 @@ router.get('/:id', (req, res) => {
     include: [{
       model: Category, 
       attributes: ['category_name'], 
-      // // include: [{
-      // //   model: Tag,
-      // //   attributes: ['tag_name']}
-      // ]
+      include: [{
+        model: Tag,
+        attributes: ['tag_name']}
+      ]
     }]
   }) .then(productData => {
     if (!productData) {
