@@ -3,7 +3,6 @@ const routes = require('./routes');
 const sequelize = require('./config/connection');
 // import sequelize connection
 // Create the code needed in `server.js` to sync the Sequelize models to the MySQL database on server start.
-// import sequelize connection
 
 const app = express();
 const PORT = process.env.PORT || 3001;
