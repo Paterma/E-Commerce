@@ -14,6 +14,10 @@ router.get('/', (req, res) => {
       attributes: ['id', 'product_name', 'price', 'stock', 'catergory_id']
     }]
   }) .then(tagData =>res.json(tagData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+});
 })
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
@@ -29,10 +33,13 @@ router.get('/:id', (req, res) => {
   })
 .then(tagData => {
   if (!tagData){
-    res.status(404).json({message: 'There was no tag found with this id'})
+    res.status(404).json({message: 'No tag found'})
     return;
   } res.json(tagData)
-})
+}) .catch(err => {
+  console.log(err);
+  res.status(500).json(err);
+});
 });
 
 router.post('/', (req, res) => {

@@ -14,6 +14,10 @@ router.get('/', (req, res) => {
       attributes: ['id', 'tag_name']
     }]
   }) .then(productData => res.json(productData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+});
 });
 
 // get one product
@@ -38,7 +42,10 @@ router.get('/:id', (req, res) => {
       res.status(404).json({Message: "No product found"})
       return;
     } res.json(productData)
-  })
+  })  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+});
 });
 
 // create new product
@@ -122,6 +129,10 @@ router.delete('/:id', (req, res) => {
       id: req.params.id
     }
   }) .then(productData => res.json(productData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+});
 });
 
 module.exports = router;
