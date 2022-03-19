@@ -8,10 +8,11 @@ router.get('/', (req, res) => {
   // find all tags
   // be sure to include its associated Product data
   Tag.findAll({
-    attributes:['id', 'tag_name'],
+    attributes:['id'],
     include: [{
       model: Product, 
-      attributes: ['id', 'product_name', 'price', 'stock', 'catergory_id']
+      attributes: ['id', 'product_name', 'price', 'stock'], 
+      through: ProductTag,
     }]
   }) .then(tagData =>res.json(tagData))
   .catch(err => {
@@ -25,10 +26,11 @@ router.get('/:id', (req, res) => {
   Tag.findOne({
     where: {
       id: req.params.id
-    }, attributes: ['id', 'tag_name'], 
+    }, attributes: ['id'], 
     include: [{
       model: Product, 
-      attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+      attributes: ['id', 'product_name', 'price', 'stock'], 
+      through: ProductTag,
     }]
   })
 .then(tagData => {
